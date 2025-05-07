@@ -12,3 +12,8 @@ class PreguntaViewSet(viewsets.ModelViewSet):
     queryset = Pregunta.objects.all()
     serializer_class = PreguntaSerializer
     permission_classes = [permissions.AllowAny]
+
+class OpcionViewSet(viewsets.ModelViewSet):
+    queryset = Opcion.objects.all()
+    serializer_class = OpcionSerializer
+    permission_classes = [permissions.AllowAny]
