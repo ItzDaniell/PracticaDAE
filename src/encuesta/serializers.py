@@ -22,3 +22,9 @@ class EncuestaSerializer(serializers.ModelSerializer):
         model = Encuesta
         fields = ['id', 'nombre', 'descripcion', 'fecha_inicio', 'fecha_fin', 'preguntas', 'created_at', 'updated_at']
         read_only_fields = ['created_at', 'updated_at']
+
+class RespuestaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Respuesta
+        fields = ['id', 'pregunta', 'opcion', 'respuesta_texto', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at']
