@@ -6,7 +6,7 @@ A web application developed with Django Rest Framework, clearly structured to ef
 This project follows a custom structure:
 - `src/`: Main code directory
   - `config/`: Project configuration
-  - `library/`: Main application
+  - `encuesta/`: Main application
 - `venv/`: Virtual environment (not tracked in git)
 
 ## 🔍 Prior Requirements
@@ -56,10 +56,10 @@ Follow these steps to create a project using Django:
 Access the site at `http://127.0.0.1:8000/` and admin at `http://127.0.0.1:8000/admin/`
 
 ## 🛠 Development
-- Add models to library/models.py
-- Create serializers in library/serializers.py
-- Create viewsets in library/api.py
-- Configure the urls in library/urls.py
+- Add models to encuesta/models.py
+- Create serializers in encuesta/serializers.py
+- Create viewsets in encuesta/api.py
+- Configure the urls in encuesta/urls.py
 
 ## 👤 Autors
 - Rodriguez Ordoñez Juan Daniel
