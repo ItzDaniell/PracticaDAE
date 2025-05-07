@@ -17,3 +17,8 @@ class OpcionViewSet(viewsets.ModelViewSet):
     queryset = Opcion.objects.all()
     serializer_class = OpcionSerializer
     permission_classes = [permissions.AllowAny]
+
+class RespuestaViewSet(viewsets.ModelViewSet):
+    queryset = Respuesta.objects.all()
+    serializer_class = RespuestaSerializer
+    permission_classes = [permissions.AllowAny]
