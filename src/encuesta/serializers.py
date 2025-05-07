@@ -15,3 +15,10 @@ class PreguntaSerializer(serializers.ModelSerializer):
         fields = ['id', 'texto', 'tipo', 'opciones', 'created_at', 'updated_at']
         read_only_fields = ['created_at', 'updated_at']
 
+class EncuestaSerializer(serializers.ModelSerializer):
+    preguntas = PreguntaSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Encuesta
+        fields = ['id', 'nombre', 'descripcion', 'fecha_inicio', 'fecha_fin', 'preguntas', 'created_at', 'updated_at']
+        read_only_fields = ['created_at', 'updated_at']
