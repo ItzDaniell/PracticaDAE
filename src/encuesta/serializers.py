@@ -7,3 +7,11 @@ class OpcionSerializer(serializers.ModelSerializer):
         fields = ['id', 'texto', 'created_at', 'updated_at']
         read_only_fields = ['created_at', 'updated_at']
 
+class PreguntaSerializer(serializers.ModelSerializer):
+    opciones = OpcionSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Pregunta
+        fields = ['id', 'texto', 'tipo', 'opciones', 'created_at', 'updated_at']
+        read_only_fields = ['created_at', 'updated_at']
+
